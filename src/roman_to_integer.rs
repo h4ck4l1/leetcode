@@ -5,16 +5,6 @@ use std::time::{Instant,Duration};
 
 pub fn roman_to_int(s: String) -> i32 {
     let start = Instant::now();
-    // let roman_dict: HashMap<&str,i32> = HashMap::from([
-    //     ("Z",0),
-    //     ("I",1),
-    //     ("V",5),
-    //     ("X",10),
-    //     ("L",50),
-    //     ("C",100),
-    //     ("D",500),
-    //     ("M",1000)
-    // ]);
     let mut roman_dict: HashMap<&str,i32> = HashMap::new();
     roman_dict.insert("Z", 0);
     roman_dict.insert("I", 1);
