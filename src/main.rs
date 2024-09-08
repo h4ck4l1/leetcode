@@ -1,12 +1,11 @@
 #![allow(unused)]
 
-mod index_of_first_occurance;
-use index_of_first_occurance::str_str;
+mod search_insert_position;
+use search_insert_position::search_insert;
 
 fn main() {
 
 }
-
 
 
 #[cfg(test)]
@@ -15,23 +14,20 @@ mod tests {
 
     #[test]
     fn first_test() {
-        assert_eq!(0,str_str("sadbutsad".to_string(), "sad".to_string()));
+        assert_eq!(2,search_insert(vec![1,3,5,6], 5));
     }
-
 
     #[test]
     fn second_test() {
-        assert_eq!(-1,str_str("leetcode".to_string(), "leeto".to_string()));
+        assert_eq!(2,search_insert(vec![1,3,5,6], 2));
     }
-
 
     #[test]
     fn third_test() {
-        assert_eq!(4,str_str("mississippi".to_string(), "issip".to_string()));
+        assert_eq!(4,search_insert(vec![1,3,5,6], 7));
     }
-
-
 }
+
 
 
 
